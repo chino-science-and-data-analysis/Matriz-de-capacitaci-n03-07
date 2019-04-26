@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="0aff97dfa1b34235a18973af5dddd518" Name="Diagram1">
+        <EntityTypeShape EntityType="MatrizCapFgiModel.cat_causa_baja" Width="1.5" PointX="5.25" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MatrizCapFgiModel.cat_generos" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MatrizCapFgiModel.cat_horarios" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MatrizCapFgiModel.cat_status" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MatrizCapFgiModel.cat_tipousuario" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MatrizCapFgiModel.tbl_alcaldias" Width="1.5" PointX="5.25" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MatrizCapFgiModel.tbl_areas" Width="1.5" PointX="3" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MatrizCapFgiModel.tbl_colaboradores" Width="1.5" PointX="7.5" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MatrizCapFgiModel.tbl_cursoexterno" Width="1.5" PointX="7.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MatrizCapFgiModel.tbl_cursointerno" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MatrizCapFgiModel.tbl_departamentos" Width="1.5" PointX="0.75" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MatrizCapFgiModel.tbl_pno" Width="1.5" PointX="0.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MatrizCapFgiModel.tbl_puestos" Width="1.5" PointX="5.25" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MatrizCapFgiModel.tbl_sucursales" Width="1.5" PointX="5.25" PointY="11.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MatrizCapFgiModel.tbl_usuarios" Width="1.5" PointX="9.75" PointY="4.75" IsExpanded="true" />
+        <AssociationConnector Association="MatrizCapFgiModel.FK_Id_Causa_Baja" ManuallyRouted="false" />
+        <AssociationConnector Association="MatrizCapFgiModel.FK_Id_Alcaldia" ManuallyRouted="false" />
+        <AssociationConnector Association="MatrizCapFgiModel.FK_Id_Alcaldia1" ManuallyRouted="false" />
+        <AssociationConnector Association="MatrizCapFgiModel.FK_Id_Area" ManuallyRouted="false" />
+        <AssociationConnector Association="MatrizCapFgiModel.FK_Id_Area1" ManuallyRouted="false" />
+        <AssociationConnector Association="MatrizCapFgiModel.FK_Id_Departamento" ManuallyRouted="false" />
+        <AssociationConnector Association="MatrizCapFgiModel.FK_Id_Departamento2" ManuallyRouted="false" />
+        <AssociationConnector Association="MatrizCapFgiModel.FK_Id_Puesto" ManuallyRouted="false" />
+        <AssociationConnector Association="MatrizCapFgiModel.FK_Id_Sucursal" ManuallyRouted="false" />
+        <AssociationConnector Association="MatrizCapFgiModel.FK_Id_Departamento1" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

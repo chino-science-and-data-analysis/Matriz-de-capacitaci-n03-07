@@ -1,0 +1,959 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="MatrizCapFgiModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="cat_causa_baja">
+          <Key>
+            <PropertyRef Name="Id_Causa_Baja" />
+          </Key>
+          <Property Name="Id_Causa_Baja" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="cat_generos">
+          <Key>
+            <PropertyRef Name="Id_Genero" />
+          </Key>
+          <Property Name="Id_Genero" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="cat_horarios">
+          <Key>
+            <PropertyRef Name="Id_Horario" />
+          </Key>
+          <Property Name="Id_Horario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="cat_status">
+          <Key>
+            <PropertyRef Name="Id_Status" />
+          </Key>
+          <Property Name="Id_Status" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="cat_tipousuario">
+          <Key>
+            <PropertyRef Name="Id_TipoUsuario" />
+          </Key>
+          <Property Name="Id_TipoUsuario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbl_alcaldias">
+          <Key>
+            <PropertyRef Name="Id_Alcaldia" />
+          </Key>
+          <Property Name="Id_Alcaldia" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="tbl_areas">
+          <Key>
+            <PropertyRef Name="Id_Area" />
+          </Key>
+          <Property Name="Id_Area" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Id_Departamento" Type="int" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="25" />
+        </EntityType>
+        <EntityType Name="tbl_colaboradores">
+          <Key>
+            <PropertyRef Name="Numero_Empleado" />
+          </Key>
+          <Property Name="Numero_Empleado" Type="int" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="Apellido_Paterno" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="Apellido_Materno" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="Genero" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Id_Area" Type="int" />
+          <Property Name="Id_Departamento" Type="int" />
+          <Property Name="Id_Puesto" Type="int" />
+          <Property Name="Id_Alcaldia" Type="int" />
+          <Property Name="Id_Sucursal" Type="int" />
+          <Property Name="Horario" Type="varchar" MaxLength="50" />
+          <Property Name="Fecha_Nacimiento" Type="date" />
+          <Property Name="RFC" Type="varchar" MaxLength="15" />
+          <Property Name="Curp" Type="varchar" MaxLength="25" />
+          <Property Name="Num_SS" Type="varchar" MaxLength="15" />
+          <Property Name="Fecha_Ingreso" Type="date" />
+          <Property Name="Fecha_Ingreso_Plubek" Type="date" />
+          <Property Name="Status_Tab" Type="varchar" MaxLength="50" />
+          <Property Name="Fecha_Baja" Type="date" />
+          <Property Name="Id_Causa_Baja" Type="int" />
+          <Property Name="Comentarios" Type="varchar" MaxLength="150" />
+          <Property Name="Comentarios_2" Type="varchar" MaxLength="50" />
+          <Property Name="Observaciones" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tbl_cursoexterno">
+          <Key>
+            <PropertyRef Name="Id_CE" />
+          </Key>
+          <Property Name="Id_CE" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nombre_CE" Type="varchar" MaxLength="350" />
+          <Property Name="Tipo_Evento_CE" Type="varchar" MaxLength="30" />
+          <Property Name="Objetivo_CE" Type="varchar" MaxLength="350" />
+          <Property Name="Justificacion_CE" Type="varchar" MaxLength="350" />
+          <Property Name="Finalidad_CE" Type="varchar" MaxLength="350" />
+          <Property Name="Fecha_CE" Type="date" />
+          <Property Name="Horario_CE" Type="varchar" MaxLength="50" />
+          <Property Name="Sede_CE" Type="varchar" MaxLength="350" />
+          <Property Name="Nombre_Institucion_CE" Type="varchar" MaxLength="350" />
+          <Property Name="Razon_Social_CE" Type="varchar" MaxLength="100" />
+          <Property Name="RFC_CE" Type="varchar" MaxLength="20" />
+          <Property Name="Direccion_Fiscal_CE" Type="varchar" MaxLength="150" />
+          <Property Name="Instructor_CE" Type="varchar" MaxLength="100" />
+          <Property Name="Registro_STPS_CE" Type="varchar" MaxLength="30" />
+          <Property Name="Importe_CE" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="IVA_CE" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="Total_CE" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="Banco_CE" Type="varchar" MaxLength="50" />
+          <Property Name="Cuenta_CE" Type="bigint" />
+          <Property Name="Clabe_CE" Type="bigint" />
+          <Property Name="Comentarios_CE" Type="varchar" MaxLength="350" />
+          <Property Name="Observaciones_CE" Type="varchar" MaxLength="350" />
+        </EntityType>
+        <EntityType Name="tbl_cursointerno">
+          <Key>
+            <PropertyRef Name="Id_CI" />
+          </Key>
+          <Property Name="Id_CI" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nombre_CI" Type="varchar" MaxLength="350" />
+          <Property Name="Tipo_Evento_CI" Type="varchar" MaxLength="30" />
+          <Property Name="Fecha_CI" Type="date" />
+          <Property Name="Duracion_CI" Type="varchar" MaxLength="8" />
+          <Property Name="Facilitador_CI" Type="varchar" MaxLength="100" />
+          <Property Name="Comentarios_CI" Type="varchar" MaxLength="350" />
+          <Property Name="Observaciones_CI" Type="varchar" MaxLength="350" />
+        </EntityType>
+        <EntityType Name="tbl_departamentos">
+          <Key>
+            <PropertyRef Name="Id_Departamento" />
+          </Key>
+          <Property Name="Id_Departamento" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="25" />
+        </EntityType>
+        <EntityType Name="tbl_pno">
+          <Key>
+            <PropertyRef Name="Id_PNO" />
+          </Key>
+          <Property Name="Id_PNO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nombre_PNO" Type="varchar" MaxLength="30" />
+          <Property Name="Fecha_PNO" Type="date" />
+          <Property Name="Duracion_PNO" Type="varchar" MaxLength="8" />
+          <Property Name="Facilitador_PNO" Type="varchar" MaxLength="50" />
+          <Property Name="Comentarios_PNO" Type="varchar" MaxLength="50" />
+          <Property Name="Observaciones_PNO" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tbl_puestos">
+          <Key>
+            <PropertyRef Name="Id_Puesto" />
+          </Key>
+          <Property Name="Id_Puesto" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Id_Departamento" Type="int" Nullable="false" />
+          <Property Name="Id_Area" Type="int" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="25" Nullable="false" />
+          <Property Name="Comentarios" Type="varchar" MaxLength="50" />
+          <Property Name="Observaciones" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tbl_sucursales">
+          <Key>
+            <PropertyRef Name="Id_Sucursal" />
+          </Key>
+          <Property Name="Id_Sucursal" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="30" />
+          <Property Name="Estatus" Type="varchar" MaxLength="30" />
+          <Property Name="Estado" Type="varchar" MaxLength="30" />
+          <Property Name="Calle_Numero" Type="varchar" MaxLength="30" />
+          <Property Name="Colonia" Type="varchar" MaxLength="20" />
+          <Property Name="Id_Alcaldia" Type="int" Nullable="false" />
+          <Property Name="Codigo_Postal" Type="int" />
+          <Property Name="Zona" Type="int" />
+          <Property Name="Comentarios" Type="varchar" MaxLength="50" />
+          <Property Name="Observaciones" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tbl_usuarios">
+          <Key>
+            <PropertyRef Name="Id_Usuario" />
+          </Key>
+          <Property Name="Id_Usuario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Numero_Empleado" Type="int" Nullable="false" />
+          <Property Name="Usuario" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="Contraseña" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Id_TipoUsuario" Type="int" Nullable="false" />
+          <Property Name="Id_Area" Type="int" />
+        </EntityType>
+        <Association Name="FK_Id_Alcaldia">
+          <End Role="tbl_alcaldias" Type="Self.tbl_alcaldias" Multiplicity="1" />
+          <End Role="tbl_sucursales" Type="Self.tbl_sucursales" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_alcaldias">
+              <PropertyRef Name="Id_Alcaldia" />
+            </Principal>
+            <Dependent Role="tbl_sucursales">
+              <PropertyRef Name="Id_Alcaldia" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Id_Alcaldia1">
+          <End Role="tbl_alcaldias" Type="Self.tbl_alcaldias" Multiplicity="0..1" />
+          <End Role="tbl_colaboradores" Type="Self.tbl_colaboradores" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_alcaldias">
+              <PropertyRef Name="Id_Alcaldia" />
+            </Principal>
+            <Dependent Role="tbl_colaboradores">
+              <PropertyRef Name="Id_Alcaldia" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Id_Area">
+          <End Role="tbl_areas" Type="Self.tbl_areas" Multiplicity="1" />
+          <End Role="tbl_puestos" Type="Self.tbl_puestos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_areas">
+              <PropertyRef Name="Id_Area" />
+            </Principal>
+            <Dependent Role="tbl_puestos">
+              <PropertyRef Name="Id_Area" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Id_Area1">
+          <End Role="tbl_areas" Type="Self.tbl_areas" Multiplicity="0..1" />
+          <End Role="tbl_colaboradores" Type="Self.tbl_colaboradores" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_areas">
+              <PropertyRef Name="Id_Area" />
+            </Principal>
+            <Dependent Role="tbl_colaboradores">
+              <PropertyRef Name="Id_Area" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Id_Causa_Baja">
+          <End Role="cat_causa_baja" Type="Self.cat_causa_baja" Multiplicity="0..1" />
+          <End Role="tbl_colaboradores" Type="Self.tbl_colaboradores" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="cat_causa_baja">
+              <PropertyRef Name="Id_Causa_Baja" />
+            </Principal>
+            <Dependent Role="tbl_colaboradores">
+              <PropertyRef Name="Id_Causa_Baja" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Id_Departamento">
+          <End Role="tbl_departamentos" Type="Self.tbl_departamentos" Multiplicity="1" />
+          <End Role="tbl_areas" Type="Self.tbl_areas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_departamentos">
+              <PropertyRef Name="Id_Departamento" />
+            </Principal>
+            <Dependent Role="tbl_areas">
+              <PropertyRef Name="Id_Departamento" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Id_Departamento1">
+          <End Role="tbl_departamentos" Type="Self.tbl_departamentos" Multiplicity="1" />
+          <End Role="tbl_puestos" Type="Self.tbl_puestos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_departamentos">
+              <PropertyRef Name="Id_Departamento" />
+            </Principal>
+            <Dependent Role="tbl_puestos">
+              <PropertyRef Name="Id_Departamento" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Id_Departamento2">
+          <End Role="tbl_departamentos" Type="Self.tbl_departamentos" Multiplicity="0..1" />
+          <End Role="tbl_colaboradores" Type="Self.tbl_colaboradores" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_departamentos">
+              <PropertyRef Name="Id_Departamento" />
+            </Principal>
+            <Dependent Role="tbl_colaboradores">
+              <PropertyRef Name="Id_Departamento" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Id_Puesto">
+          <End Role="tbl_puestos" Type="Self.tbl_puestos" Multiplicity="0..1" />
+          <End Role="tbl_colaboradores" Type="Self.tbl_colaboradores" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_puestos">
+              <PropertyRef Name="Id_Puesto" />
+            </Principal>
+            <Dependent Role="tbl_colaboradores">
+              <PropertyRef Name="Id_Puesto" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Id_Sucursal">
+          <End Role="tbl_sucursales" Type="Self.tbl_sucursales" Multiplicity="0..1" />
+          <End Role="tbl_colaboradores" Type="Self.tbl_colaboradores" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_sucursales">
+              <PropertyRef Name="Id_Sucursal" />
+            </Principal>
+            <Dependent Role="tbl_colaboradores">
+              <PropertyRef Name="Id_Sucursal" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="MatrizCapFgiModelStoreContainer">
+          <EntitySet Name="cat_causa_baja" EntityType="Self.cat_causa_baja" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="cat_generos" EntityType="Self.cat_generos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="cat_horarios" EntityType="Self.cat_horarios" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="cat_status" EntityType="Self.cat_status" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="cat_tipousuario" EntityType="Self.cat_tipousuario" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_alcaldias" EntityType="Self.tbl_alcaldias" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_areas" EntityType="Self.tbl_areas" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_colaboradores" EntityType="Self.tbl_colaboradores" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_cursoexterno" EntityType="Self.tbl_cursoexterno" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_cursointerno" EntityType="Self.tbl_cursointerno" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_departamentos" EntityType="Self.tbl_departamentos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_pno" EntityType="Self.tbl_pno" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_puestos" EntityType="Self.tbl_puestos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_sucursales" EntityType="Self.tbl_sucursales" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_usuarios" EntityType="Self.tbl_usuarios" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Id_Alcaldia" Association="Self.FK_Id_Alcaldia">
+            <End Role="tbl_alcaldias" EntitySet="tbl_alcaldias" />
+            <End Role="tbl_sucursales" EntitySet="tbl_sucursales" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Id_Alcaldia1" Association="Self.FK_Id_Alcaldia1">
+            <End Role="tbl_alcaldias" EntitySet="tbl_alcaldias" />
+            <End Role="tbl_colaboradores" EntitySet="tbl_colaboradores" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Id_Area" Association="Self.FK_Id_Area">
+            <End Role="tbl_areas" EntitySet="tbl_areas" />
+            <End Role="tbl_puestos" EntitySet="tbl_puestos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Id_Area1" Association="Self.FK_Id_Area1">
+            <End Role="tbl_areas" EntitySet="tbl_areas" />
+            <End Role="tbl_colaboradores" EntitySet="tbl_colaboradores" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Id_Causa_Baja" Association="Self.FK_Id_Causa_Baja">
+            <End Role="cat_causa_baja" EntitySet="cat_causa_baja" />
+            <End Role="tbl_colaboradores" EntitySet="tbl_colaboradores" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Id_Departamento" Association="Self.FK_Id_Departamento">
+            <End Role="tbl_departamentos" EntitySet="tbl_departamentos" />
+            <End Role="tbl_areas" EntitySet="tbl_areas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Id_Departamento1" Association="Self.FK_Id_Departamento1">
+            <End Role="tbl_departamentos" EntitySet="tbl_departamentos" />
+            <End Role="tbl_puestos" EntitySet="tbl_puestos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Id_Departamento2" Association="Self.FK_Id_Departamento2">
+            <End Role="tbl_departamentos" EntitySet="tbl_departamentos" />
+            <End Role="tbl_colaboradores" EntitySet="tbl_colaboradores" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Id_Puesto" Association="Self.FK_Id_Puesto">
+            <End Role="tbl_puestos" EntitySet="tbl_puestos" />
+            <End Role="tbl_colaboradores" EntitySet="tbl_colaboradores" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Id_Sucursal" Association="Self.FK_Id_Sucursal">
+            <End Role="tbl_sucursales" EntitySet="tbl_sucursales" />
+            <End Role="tbl_colaboradores" EntitySet="tbl_colaboradores" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="MatrizCapFgiModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="cat_causa_baja">
+          <Key>
+            <PropertyRef Name="Id_Causa_Baja" />
+          </Key>
+          <Property Name="Id_Causa_Baja" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="tbl_colaboradores" Relationship="Self.FK_Id_Causa_Baja" FromRole="cat_causa_baja" ToRole="tbl_colaboradores" />
+        </EntityType>
+        <EntityType Name="cat_generos">
+          <Key>
+            <PropertyRef Name="Id_Genero" />
+          </Key>
+          <Property Name="Id_Genero" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="cat_horarios">
+          <Key>
+            <PropertyRef Name="Id_Horario" />
+          </Key>
+          <Property Name="Id_Horario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="cat_status">
+          <Key>
+            <PropertyRef Name="Id_Status" />
+          </Key>
+          <Property Name="Id_Status" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="cat_tipousuario">
+          <Key>
+            <PropertyRef Name="Id_TipoUsuario" />
+          </Key>
+          <Property Name="Id_TipoUsuario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbl_alcaldias">
+          <Key>
+            <PropertyRef Name="Id_Alcaldia" />
+          </Key>
+          <Property Name="Id_Alcaldia" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="tbl_sucursales" Relationship="Self.FK_Id_Alcaldia" FromRole="tbl_alcaldias" ToRole="tbl_sucursales" />
+          <NavigationProperty Name="tbl_colaboradores" Relationship="Self.FK_Id_Alcaldia1" FromRole="tbl_alcaldias" ToRole="tbl_colaboradores" />
+        </EntityType>
+        <EntityType Name="tbl_areas">
+          <Key>
+            <PropertyRef Name="Id_Area" />
+          </Key>
+          <Property Name="Id_Area" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Id_Departamento" Type="Int32" Nullable="false" />
+          <Property Name="Nombre" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="tbl_puestos" Relationship="Self.FK_Id_Area" FromRole="tbl_areas" ToRole="tbl_puestos" />
+          <NavigationProperty Name="tbl_colaboradores" Relationship="Self.FK_Id_Area1" FromRole="tbl_areas" ToRole="tbl_colaboradores" />
+          <NavigationProperty Name="tbl_departamentos" Relationship="Self.FK_Id_Departamento" FromRole="tbl_areas" ToRole="tbl_departamentos" />
+        </EntityType>
+        <EntityType Name="tbl_colaboradores">
+          <Key>
+            <PropertyRef Name="Numero_Empleado" />
+          </Key>
+          <Property Name="Numero_Empleado" Type="Int32" Nullable="false" />
+          <Property Name="Nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Apellido_Paterno" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Apellido_Materno" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Genero" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Id_Area" Type="Int32" />
+          <Property Name="Id_Departamento" Type="Int32" />
+          <Property Name="Id_Puesto" Type="Int32" />
+          <Property Name="Id_Alcaldia" Type="Int32" />
+          <Property Name="Id_Sucursal" Type="Int32" />
+          <Property Name="Horario" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Fecha_Nacimiento" Type="DateTime" Precision="0" />
+          <Property Name="RFC" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="Curp" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="Num_SS" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="Fecha_Ingreso" Type="DateTime" Precision="0" />
+          <Property Name="Fecha_Ingreso_Plubek" Type="DateTime" Precision="0" />
+          <Property Name="Status_Tab" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Fecha_Baja" Type="DateTime" Precision="0" />
+          <Property Name="Id_Causa_Baja" Type="Int32" />
+          <Property Name="Comentarios" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="Comentarios_2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Observaciones" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="cat_causa_baja" Relationship="Self.FK_Id_Causa_Baja" FromRole="tbl_colaboradores" ToRole="cat_causa_baja" />
+          <NavigationProperty Name="tbl_alcaldias" Relationship="Self.FK_Id_Alcaldia1" FromRole="tbl_colaboradores" ToRole="tbl_alcaldias" />
+          <NavigationProperty Name="tbl_areas" Relationship="Self.FK_Id_Area1" FromRole="tbl_colaboradores" ToRole="tbl_areas" />
+          <NavigationProperty Name="tbl_departamentos" Relationship="Self.FK_Id_Departamento2" FromRole="tbl_colaboradores" ToRole="tbl_departamentos" />
+          <NavigationProperty Name="tbl_puestos" Relationship="Self.FK_Id_Puesto" FromRole="tbl_colaboradores" ToRole="tbl_puestos" />
+          <NavigationProperty Name="tbl_sucursales" Relationship="Self.FK_Id_Sucursal" FromRole="tbl_colaboradores" ToRole="tbl_sucursales" />
+        </EntityType>
+        <EntityType Name="tbl_cursoexterno">
+          <Key>
+            <PropertyRef Name="Id_CE" />
+          </Key>
+          <Property Name="Id_CE" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre_CE" Type="String" MaxLength="350" FixedLength="false" Unicode="false" />
+          <Property Name="Tipo_Evento_CE" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Objetivo_CE" Type="String" MaxLength="350" FixedLength="false" Unicode="false" />
+          <Property Name="Justificacion_CE" Type="String" MaxLength="350" FixedLength="false" Unicode="false" />
+          <Property Name="Finalidad_CE" Type="String" MaxLength="350" FixedLength="false" Unicode="false" />
+          <Property Name="Fecha_CE" Type="DateTime" Precision="0" />
+          <Property Name="Horario_CE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Sede_CE" Type="String" MaxLength="350" FixedLength="false" Unicode="false" />
+          <Property Name="Nombre_Institucion_CE" Type="String" MaxLength="350" FixedLength="false" Unicode="false" />
+          <Property Name="Razon_Social_CE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="RFC_CE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Direccion_Fiscal_CE" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="Instructor_CE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Registro_STPS_CE" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Importe_CE" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="IVA_CE" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="Total_CE" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="Banco_CE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Cuenta_CE" Type="Int64" />
+          <Property Name="Clabe_CE" Type="Int64" />
+          <Property Name="Comentarios_CE" Type="String" MaxLength="350" FixedLength="false" Unicode="false" />
+          <Property Name="Observaciones_CE" Type="String" MaxLength="350" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="tbl_cursointerno">
+          <Key>
+            <PropertyRef Name="Id_CI" />
+          </Key>
+          <Property Name="Id_CI" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre_CI" Type="String" MaxLength="350" FixedLength="false" Unicode="false" />
+          <Property Name="Tipo_Evento_CI" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Fecha_CI" Type="DateTime" Precision="0" />
+          <Property Name="Duracion_CI" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="Facilitador_CI" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Comentarios_CI" Type="String" MaxLength="350" FixedLength="false" Unicode="false" />
+          <Property Name="Observaciones_CI" Type="String" MaxLength="350" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="tbl_departamentos">
+          <Key>
+            <PropertyRef Name="Id_Departamento" />
+          </Key>
+          <Property Name="Id_Departamento" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="tbl_areas" Relationship="Self.FK_Id_Departamento" FromRole="tbl_departamentos" ToRole="tbl_areas" />
+          <NavigationProperty Name="tbl_colaboradores" Relationship="Self.FK_Id_Departamento2" FromRole="tbl_departamentos" ToRole="tbl_colaboradores" />
+          <NavigationProperty Name="tbl_puestos" Relationship="Self.FK_Id_Departamento1" FromRole="tbl_departamentos" ToRole="tbl_puestos" />
+        </EntityType>
+        <EntityType Name="tbl_pno">
+          <Key>
+            <PropertyRef Name="Id_PNO" />
+          </Key>
+          <Property Name="Id_PNO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre_PNO" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Fecha_PNO" Type="DateTime" Precision="0" />
+          <Property Name="Duracion_PNO" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="Facilitador_PNO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Comentarios_PNO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Observaciones_PNO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="tbl_puestos">
+          <Key>
+            <PropertyRef Name="Id_Puesto" />
+          </Key>
+          <Property Name="Id_Puesto" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Id_Departamento" Type="Int32" Nullable="false" />
+          <Property Name="Id_Area" Type="Int32" Nullable="false" />
+          <Property Name="Nombre" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Comentarios" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Observaciones" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="tbl_areas" Relationship="Self.FK_Id_Area" FromRole="tbl_puestos" ToRole="tbl_areas" />
+          <NavigationProperty Name="tbl_colaboradores" Relationship="Self.FK_Id_Puesto" FromRole="tbl_puestos" ToRole="tbl_colaboradores" />
+          <NavigationProperty Name="tbl_departamentos" Relationship="Self.FK_Id_Departamento1" FromRole="tbl_puestos" ToRole="tbl_departamentos" />
+        </EntityType>
+        <EntityType Name="tbl_sucursales">
+          <Key>
+            <PropertyRef Name="Id_Sucursal" />
+          </Key>
+          <Property Name="Id_Sucursal" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Estatus" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Estado" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Calle_Numero" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Colonia" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Id_Alcaldia" Type="Int32" Nullable="false" />
+          <Property Name="Codigo_Postal" Type="Int32" />
+          <Property Name="Zona" Type="Int32" />
+          <Property Name="Comentarios" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Observaciones" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="tbl_alcaldias" Relationship="Self.FK_Id_Alcaldia" FromRole="tbl_sucursales" ToRole="tbl_alcaldias" />
+          <NavigationProperty Name="tbl_colaboradores" Relationship="Self.FK_Id_Sucursal" FromRole="tbl_sucursales" ToRole="tbl_colaboradores" />
+        </EntityType>
+        <EntityType Name="tbl_usuarios">
+          <Key>
+            <PropertyRef Name="Id_Usuario" />
+          </Key>
+          <Property Name="Id_Usuario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Numero_Empleado" Type="Int32" Nullable="false" />
+          <Property Name="Usuario" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Contraseña" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Id_TipoUsuario" Type="Int32" Nullable="false" />
+          <Property Name="Id_Area" Type="Int32" />
+        </EntityType>
+        <Association Name="FK_Id_Causa_Baja">
+          <End Role="cat_causa_baja" Type="Self.cat_causa_baja" Multiplicity="0..1" />
+          <End Role="tbl_colaboradores" Type="Self.tbl_colaboradores" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="cat_causa_baja">
+              <PropertyRef Name="Id_Causa_Baja" />
+            </Principal>
+            <Dependent Role="tbl_colaboradores">
+              <PropertyRef Name="Id_Causa_Baja" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Id_Alcaldia">
+          <End Role="tbl_alcaldias" Type="Self.tbl_alcaldias" Multiplicity="1" />
+          <End Role="tbl_sucursales" Type="Self.tbl_sucursales" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_alcaldias">
+              <PropertyRef Name="Id_Alcaldia" />
+            </Principal>
+            <Dependent Role="tbl_sucursales">
+              <PropertyRef Name="Id_Alcaldia" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Id_Alcaldia1">
+          <End Role="tbl_alcaldias" Type="Self.tbl_alcaldias" Multiplicity="0..1" />
+          <End Role="tbl_colaboradores" Type="Self.tbl_colaboradores" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_alcaldias">
+              <PropertyRef Name="Id_Alcaldia" />
+            </Principal>
+            <Dependent Role="tbl_colaboradores">
+              <PropertyRef Name="Id_Alcaldia" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Id_Area">
+          <End Role="tbl_areas" Type="Self.tbl_areas" Multiplicity="1" />
+          <End Role="tbl_puestos" Type="Self.tbl_puestos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_areas">
+              <PropertyRef Name="Id_Area" />
+            </Principal>
+            <Dependent Role="tbl_puestos">
+              <PropertyRef Name="Id_Area" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Id_Area1">
+          <End Role="tbl_areas" Type="Self.tbl_areas" Multiplicity="0..1" />
+          <End Role="tbl_colaboradores" Type="Self.tbl_colaboradores" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_areas">
+              <PropertyRef Name="Id_Area" />
+            </Principal>
+            <Dependent Role="tbl_colaboradores">
+              <PropertyRef Name="Id_Area" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Id_Departamento">
+          <End Role="tbl_departamentos" Type="Self.tbl_departamentos" Multiplicity="1" />
+          <End Role="tbl_areas" Type="Self.tbl_areas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_departamentos">
+              <PropertyRef Name="Id_Departamento" />
+            </Principal>
+            <Dependent Role="tbl_areas">
+              <PropertyRef Name="Id_Departamento" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Id_Departamento2">
+          <End Role="tbl_departamentos" Type="Self.tbl_departamentos" Multiplicity="0..1" />
+          <End Role="tbl_colaboradores" Type="Self.tbl_colaboradores" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_departamentos">
+              <PropertyRef Name="Id_Departamento" />
+            </Principal>
+            <Dependent Role="tbl_colaboradores">
+              <PropertyRef Name="Id_Departamento" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Id_Puesto">
+          <End Role="tbl_puestos" Type="Self.tbl_puestos" Multiplicity="0..1" />
+          <End Role="tbl_colaboradores" Type="Self.tbl_colaboradores" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_puestos">
+              <PropertyRef Name="Id_Puesto" />
+            </Principal>
+            <Dependent Role="tbl_colaboradores">
+              <PropertyRef Name="Id_Puesto" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Id_Sucursal">
+          <End Role="tbl_sucursales" Type="Self.tbl_sucursales" Multiplicity="0..1" />
+          <End Role="tbl_colaboradores" Type="Self.tbl_colaboradores" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_sucursales">
+              <PropertyRef Name="Id_Sucursal" />
+            </Principal>
+            <Dependent Role="tbl_colaboradores">
+              <PropertyRef Name="Id_Sucursal" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Id_Departamento1">
+          <End Role="tbl_departamentos" Type="Self.tbl_departamentos" Multiplicity="1" />
+          <End Role="tbl_puestos" Type="Self.tbl_puestos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_departamentos">
+              <PropertyRef Name="Id_Departamento" />
+            </Principal>
+            <Dependent Role="tbl_puestos">
+              <PropertyRef Name="Id_Departamento" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="MatrizCapFgiEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="cat_causa_baja" EntityType="Self.cat_causa_baja" />
+          <EntitySet Name="cat_generos" EntityType="Self.cat_generos" />
+          <EntitySet Name="cat_horarios" EntityType="Self.cat_horarios" />
+          <EntitySet Name="cat_status" EntityType="Self.cat_status" />
+          <EntitySet Name="cat_tipousuario" EntityType="Self.cat_tipousuario" />
+          <EntitySet Name="tbl_alcaldias" EntityType="Self.tbl_alcaldias" />
+          <EntitySet Name="tbl_areas" EntityType="Self.tbl_areas" />
+          <EntitySet Name="tbl_colaboradores" EntityType="Self.tbl_colaboradores" />
+          <EntitySet Name="tbl_cursoexterno" EntityType="Self.tbl_cursoexterno" />
+          <EntitySet Name="tbl_cursointerno" EntityType="Self.tbl_cursointerno" />
+          <EntitySet Name="tbl_departamentos" EntityType="Self.tbl_departamentos" />
+          <EntitySet Name="tbl_pno" EntityType="Self.tbl_pno" />
+          <EntitySet Name="tbl_puestos" EntityType="Self.tbl_puestos" />
+          <EntitySet Name="tbl_sucursales" EntityType="Self.tbl_sucursales" />
+          <EntitySet Name="tbl_usuarios" EntityType="Self.tbl_usuarios" />
+          <AssociationSet Name="FK_Id_Causa_Baja" Association="Self.FK_Id_Causa_Baja">
+            <End Role="cat_causa_baja" EntitySet="cat_causa_baja" />
+            <End Role="tbl_colaboradores" EntitySet="tbl_colaboradores" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Id_Alcaldia" Association="Self.FK_Id_Alcaldia">
+            <End Role="tbl_alcaldias" EntitySet="tbl_alcaldias" />
+            <End Role="tbl_sucursales" EntitySet="tbl_sucursales" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Id_Alcaldia1" Association="Self.FK_Id_Alcaldia1">
+            <End Role="tbl_alcaldias" EntitySet="tbl_alcaldias" />
+            <End Role="tbl_colaboradores" EntitySet="tbl_colaboradores" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Id_Area" Association="Self.FK_Id_Area">
+            <End Role="tbl_areas" EntitySet="tbl_areas" />
+            <End Role="tbl_puestos" EntitySet="tbl_puestos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Id_Area1" Association="Self.FK_Id_Area1">
+            <End Role="tbl_areas" EntitySet="tbl_areas" />
+            <End Role="tbl_colaboradores" EntitySet="tbl_colaboradores" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Id_Departamento" Association="Self.FK_Id_Departamento">
+            <End Role="tbl_departamentos" EntitySet="tbl_departamentos" />
+            <End Role="tbl_areas" EntitySet="tbl_areas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Id_Departamento2" Association="Self.FK_Id_Departamento2">
+            <End Role="tbl_departamentos" EntitySet="tbl_departamentos" />
+            <End Role="tbl_colaboradores" EntitySet="tbl_colaboradores" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Id_Puesto" Association="Self.FK_Id_Puesto">
+            <End Role="tbl_puestos" EntitySet="tbl_puestos" />
+            <End Role="tbl_colaboradores" EntitySet="tbl_colaboradores" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Id_Sucursal" Association="Self.FK_Id_Sucursal">
+            <End Role="tbl_sucursales" EntitySet="tbl_sucursales" />
+            <End Role="tbl_colaboradores" EntitySet="tbl_colaboradores" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Id_Departamento1" Association="Self.FK_Id_Departamento1">
+            <End Role="tbl_departamentos" EntitySet="tbl_departamentos" />
+            <End Role="tbl_puestos" EntitySet="tbl_puestos" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="MatrizCapFgiModelStoreContainer" CdmEntityContainer="MatrizCapFgiEntities">
+          <EntitySetMapping Name="cat_causa_baja">
+            <EntityTypeMapping TypeName="MatrizCapFgiModel.cat_causa_baja">
+              <MappingFragment StoreEntitySet="cat_causa_baja">
+                <ScalarProperty Name="Id_Causa_Baja" ColumnName="Id_Causa_Baja" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="cat_generos">
+            <EntityTypeMapping TypeName="MatrizCapFgiModel.cat_generos">
+              <MappingFragment StoreEntitySet="cat_generos">
+                <ScalarProperty Name="Id_Genero" ColumnName="Id_Genero" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="cat_horarios">
+            <EntityTypeMapping TypeName="MatrizCapFgiModel.cat_horarios">
+              <MappingFragment StoreEntitySet="cat_horarios">
+                <ScalarProperty Name="Id_Horario" ColumnName="Id_Horario" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="cat_status">
+            <EntityTypeMapping TypeName="MatrizCapFgiModel.cat_status">
+              <MappingFragment StoreEntitySet="cat_status">
+                <ScalarProperty Name="Id_Status" ColumnName="Id_Status" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="cat_tipousuario">
+            <EntityTypeMapping TypeName="MatrizCapFgiModel.cat_tipousuario">
+              <MappingFragment StoreEntitySet="cat_tipousuario">
+                <ScalarProperty Name="Id_TipoUsuario" ColumnName="Id_TipoUsuario" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_alcaldias">
+            <EntityTypeMapping TypeName="MatrizCapFgiModel.tbl_alcaldias">
+              <MappingFragment StoreEntitySet="tbl_alcaldias">
+                <ScalarProperty Name="Id_Alcaldia" ColumnName="Id_Alcaldia" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_areas">
+            <EntityTypeMapping TypeName="MatrizCapFgiModel.tbl_areas">
+              <MappingFragment StoreEntitySet="tbl_areas">
+                <ScalarProperty Name="Id_Area" ColumnName="Id_Area" />
+                <ScalarProperty Name="Id_Departamento" ColumnName="Id_Departamento" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_colaboradores">
+            <EntityTypeMapping TypeName="MatrizCapFgiModel.tbl_colaboradores">
+              <MappingFragment StoreEntitySet="tbl_colaboradores">
+                <ScalarProperty Name="Numero_Empleado" ColumnName="Numero_Empleado" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Apellido_Paterno" ColumnName="Apellido_Paterno" />
+                <ScalarProperty Name="Apellido_Materno" ColumnName="Apellido_Materno" />
+                <ScalarProperty Name="Genero" ColumnName="Genero" />
+                <ScalarProperty Name="Id_Area" ColumnName="Id_Area" />
+                <ScalarProperty Name="Id_Departamento" ColumnName="Id_Departamento" />
+                <ScalarProperty Name="Id_Puesto" ColumnName="Id_Puesto" />
+                <ScalarProperty Name="Id_Alcaldia" ColumnName="Id_Alcaldia" />
+                <ScalarProperty Name="Id_Sucursal" ColumnName="Id_Sucursal" />
+                <ScalarProperty Name="Horario" ColumnName="Horario" />
+                <ScalarProperty Name="Fecha_Nacimiento" ColumnName="Fecha_Nacimiento" />
+                <ScalarProperty Name="RFC" ColumnName="RFC" />
+                <ScalarProperty Name="Curp" ColumnName="Curp" />
+                <ScalarProperty Name="Num_SS" ColumnName="Num_SS" />
+                <ScalarProperty Name="Fecha_Ingreso" ColumnName="Fecha_Ingreso" />
+                <ScalarProperty Name="Fecha_Ingreso_Plubek" ColumnName="Fecha_Ingreso_Plubek" />
+                <ScalarProperty Name="Status_Tab" ColumnName="Status_Tab" />
+                <ScalarProperty Name="Fecha_Baja" ColumnName="Fecha_Baja" />
+                <ScalarProperty Name="Id_Causa_Baja" ColumnName="Id_Causa_Baja" />
+                <ScalarProperty Name="Comentarios" ColumnName="Comentarios" />
+                <ScalarProperty Name="Comentarios_2" ColumnName="Comentarios_2" />
+                <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_cursoexterno">
+            <EntityTypeMapping TypeName="MatrizCapFgiModel.tbl_cursoexterno">
+              <MappingFragment StoreEntitySet="tbl_cursoexterno">
+                <ScalarProperty Name="Id_CE" ColumnName="Id_CE" />
+                <ScalarProperty Name="Nombre_CE" ColumnName="Nombre_CE" />
+                <ScalarProperty Name="Tipo_Evento_CE" ColumnName="Tipo_Evento_CE" />
+                <ScalarProperty Name="Objetivo_CE" ColumnName="Objetivo_CE" />
+                <ScalarProperty Name="Justificacion_CE" ColumnName="Justificacion_CE" />
+                <ScalarProperty Name="Finalidad_CE" ColumnName="Finalidad_CE" />
+                <ScalarProperty Name="Fecha_CE" ColumnName="Fecha_CE" />
+                <ScalarProperty Name="Horario_CE" ColumnName="Horario_CE" />
+                <ScalarProperty Name="Sede_CE" ColumnName="Sede_CE" />
+                <ScalarProperty Name="Nombre_Institucion_CE" ColumnName="Nombre_Institucion_CE" />
+                <ScalarProperty Name="Razon_Social_CE" ColumnName="Razon_Social_CE" />
+                <ScalarProperty Name="RFC_CE" ColumnName="RFC_CE" />
+                <ScalarProperty Name="Direccion_Fiscal_CE" ColumnName="Direccion_Fiscal_CE" />
+                <ScalarProperty Name="Instructor_CE" ColumnName="Instructor_CE" />
+                <ScalarProperty Name="Registro_STPS_CE" ColumnName="Registro_STPS_CE" />
+                <ScalarProperty Name="Importe_CE" ColumnName="Importe_CE" />
+                <ScalarProperty Name="IVA_CE" ColumnName="IVA_CE" />
+                <ScalarProperty Name="Total_CE" ColumnName="Total_CE" />
+                <ScalarProperty Name="Banco_CE" ColumnName="Banco_CE" />
+                <ScalarProperty Name="Cuenta_CE" ColumnName="Cuenta_CE" />
+                <ScalarProperty Name="Clabe_CE" ColumnName="Clabe_CE" />
+                <ScalarProperty Name="Comentarios_CE" ColumnName="Comentarios_CE" />
+                <ScalarProperty Name="Observaciones_CE" ColumnName="Observaciones_CE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_cursointerno">
+            <EntityTypeMapping TypeName="MatrizCapFgiModel.tbl_cursointerno">
+              <MappingFragment StoreEntitySet="tbl_cursointerno">
+                <ScalarProperty Name="Id_CI" ColumnName="Id_CI" />
+                <ScalarProperty Name="Nombre_CI" ColumnName="Nombre_CI" />
+                <ScalarProperty Name="Tipo_Evento_CI" ColumnName="Tipo_Evento_CI" />
+                <ScalarProperty Name="Fecha_CI" ColumnName="Fecha_CI" />
+                <ScalarProperty Name="Duracion_CI" ColumnName="Duracion_CI" />
+                <ScalarProperty Name="Facilitador_CI" ColumnName="Facilitador_CI" />
+                <ScalarProperty Name="Comentarios_CI" ColumnName="Comentarios_CI" />
+                <ScalarProperty Name="Observaciones_CI" ColumnName="Observaciones_CI" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_departamentos">
+            <EntityTypeMapping TypeName="MatrizCapFgiModel.tbl_departamentos">
+              <MappingFragment StoreEntitySet="tbl_departamentos">
+                <ScalarProperty Name="Id_Departamento" ColumnName="Id_Departamento" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_pno">
+            <EntityTypeMapping TypeName="MatrizCapFgiModel.tbl_pno">
+              <MappingFragment StoreEntitySet="tbl_pno">
+                <ScalarProperty Name="Id_PNO" ColumnName="Id_PNO" />
+                <ScalarProperty Name="Nombre_PNO" ColumnName="Nombre_PNO" />
+                <ScalarProperty Name="Fecha_PNO" ColumnName="Fecha_PNO" />
+                <ScalarProperty Name="Duracion_PNO" ColumnName="Duracion_PNO" />
+                <ScalarProperty Name="Facilitador_PNO" ColumnName="Facilitador_PNO" />
+                <ScalarProperty Name="Comentarios_PNO" ColumnName="Comentarios_PNO" />
+                <ScalarProperty Name="Observaciones_PNO" ColumnName="Observaciones_PNO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_puestos">
+            <EntityTypeMapping TypeName="MatrizCapFgiModel.tbl_puestos">
+              <MappingFragment StoreEntitySet="tbl_puestos">
+                <ScalarProperty Name="Id_Puesto" ColumnName="Id_Puesto" />
+                <ScalarProperty Name="Id_Departamento" ColumnName="Id_Departamento" />
+                <ScalarProperty Name="Id_Area" ColumnName="Id_Area" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Comentarios" ColumnName="Comentarios" />
+                <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_sucursales">
+            <EntityTypeMapping TypeName="MatrizCapFgiModel.tbl_sucursales">
+              <MappingFragment StoreEntitySet="tbl_sucursales">
+                <ScalarProperty Name="Id_Sucursal" ColumnName="Id_Sucursal" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Estatus" ColumnName="Estatus" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Calle_Numero" ColumnName="Calle_Numero" />
+                <ScalarProperty Name="Colonia" ColumnName="Colonia" />
+                <ScalarProperty Name="Id_Alcaldia" ColumnName="Id_Alcaldia" />
+                <ScalarProperty Name="Codigo_Postal" ColumnName="Codigo_Postal" />
+                <ScalarProperty Name="Zona" ColumnName="Zona" />
+                <ScalarProperty Name="Comentarios" ColumnName="Comentarios" />
+                <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_usuarios">
+            <EntityTypeMapping TypeName="MatrizCapFgiModel.tbl_usuarios">
+              <MappingFragment StoreEntitySet="tbl_usuarios">
+                <ScalarProperty Name="Id_Usuario" ColumnName="Id_Usuario" />
+                <ScalarProperty Name="Numero_Empleado" ColumnName="Numero_Empleado" />
+                <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+                <ScalarProperty Name="Contraseña" ColumnName="Contraseña" />
+                <ScalarProperty Name="Id_TipoUsuario" ColumnName="Id_TipoUsuario" />
+                <ScalarProperty Name="Id_Area" ColumnName="Id_Area" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
