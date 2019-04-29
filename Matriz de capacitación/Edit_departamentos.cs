@@ -32,7 +32,7 @@ namespace Matriz_de_capacitación
             if (obDatos.actualizar("tbl_departamentos", campos, "Id_Departamento='" + this.txtclavedep.Text + "'"))
             {
                 MessageBox.Show("Se actualizó correctamente");
-                OBFiltro.txt_filtrodep.Select();
+                OBFiltro.txt_buscar.Select();
                 this.Close();
             }
             else
@@ -44,7 +44,7 @@ namespace Matriz_de_capacitación
 
         private void button2_Click(object sender, EventArgs e)
         {
-            OBFiltro.txt_filtrodep.Select();
+            OBFiltro.txt_buscar.Select();
             this.Close();
         }
         frm_departamentos OBFiltro = new frm_departamentos();

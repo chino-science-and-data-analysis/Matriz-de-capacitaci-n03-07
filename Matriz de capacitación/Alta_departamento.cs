@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Matriz_de_capacitación
 {
-    public partial class Alta_departamento : MetroFramework.Forms.MetroForm
+    public partial class Alta_departamento : Form
     {
         frm_departamentos Obtxtfiltro = new frm_departamentos();
         public Alta_departamento()
@@ -60,7 +60,7 @@ namespace Matriz_de_capacitación
                 {
                     MessageBox.Show("Registro exitoso");
                     this.Close();
-                    Obtxtfiltro.txt_filtrodep.Select();
+                    Obtxtfiltro.txt_buscar.Select();
                 }
                 else
                 {
@@ -117,9 +117,9 @@ namespace Matriz_de_capacitación
         private void button2_Click_1(object sender, EventArgs e)
         {
             
-            this.Obtxtfiltro.txt_filtrodep.Focus();
-            this.Obtxtfiltro.txt_filtrodep.Select();
-            this.Obtxtfiltro.txt_filtrodep.Clear();
+            this.Obtxtfiltro.txt_buscar.Focus();
+            this.Obtxtfiltro.txt_buscar.Select();
+            this.Obtxtfiltro.txt_buscar.Clear();
             this.Close();
         }
 

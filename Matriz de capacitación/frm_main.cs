@@ -19,18 +19,7 @@ namespace Matriz_de_capacitación
         }
         private void iconCerrar_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("¿Está seguro que desea salir?", "Alerta", MessageBoxButtons.YesNo) == DialogResult.Yes)
-            {
 
-                //tus codigos
-                frm_login obLogin = new frm_login();
-                obLogin.Show();
-                this.Close();
-                //Application.Exit();
-            }
-            else { 
-            //tus codigos
-            }
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -47,15 +36,16 @@ namespace Matriz_de_capacitación
 
         private void AbrirFormInPanel(object formHijo)
         {
-            if (this.panelContenedor.Controls.Count > 0)
-            this.panelContenedor.Controls.RemoveAt(0);
+            if (this.pnl_central.Controls.Count > 0)
+            this.pnl_central.Controls.RemoveAt(0);
             Form fh = formHijo as Form;
             fh.TopLevel = false;
             fh.FormBorderStyle = FormBorderStyle.None;
             fh.Dock = DockStyle.Fill;
-            this.panelContenedor.Controls.Add(fh);
-            this.panelContenedor.Tag = fh;
+            this.pnl_central.Controls.Add(fh);
+            this.pnl_central.Tag = fh;
             fh.Show();
+            return;
         }
         int LX, LY,SW,SH;
         private void iconmaximizar_Click(object sender, EventArgs e)
@@ -67,8 +57,8 @@ namespace Matriz_de_capacitación
             SH = this.Size.Height;
             this.Size = Screen.PrimaryScreen.WorkingArea.Size;
             this.Location = Screen.PrimaryScreen.WorkingArea.Location;
-            iconmaximizar.Visible = false;
-            iconrestaurar.Visible = true;
+            btn_maximizar.Visible = false;
+            btn_restaurar.Visible = true;
         }
 
         private void iconrestaurar_Click(object sender, EventArgs e)
@@ -76,8 +66,8 @@ namespace Matriz_de_capacitación
             //this.WindowState = FormWindowState.Normal;
             this.Size = new Size(SW, SH);
             this.Location = new Point(LX,LY);
-            iconmaximizar.Visible = true;
-            iconrestaurar.Visible = false;
+            btn_maximizar.Visible = true;
+            btn_restaurar.Visible = false;
         }
 
         private void iconMinimizar_Click(object sender, EventArgs e)
@@ -87,14 +77,58 @@ namespace Matriz_de_capacitación
 
         private void btnmenu_Click(object sender, EventArgs e)
         {
-            if (MenuVertical.Width == 57)
+            if (pnl_menulateral.Width == 250)
             {
-                MenuVertical.Width = 250;
+                this.tmr_ocultar.Enabled = true;
             }
             else
+            {
+                this.tmr_mostrar.Enabled = true;
+            }
 
+
+/*            if (MenuVertical.Width == 57)
+            {
+                btnINICIO.Visible = true;
+                btn_inicio2.Visible = false;
+                MenuVertical.Width = 250;
+                return;
+            }
+            else
+            {
                 MenuVertical.Width = 57;
+                btnINICIO.Visible = false;
+                btn_inicio2.Visible = true;
+                return;
+                }
+*/
         }
+        private void tmr_ocultar_Tick(object sender, EventArgs e)
+        {
+            if (pnl_menulateral.Width <= 60)
+            {
+                this.tmr_ocultar.Enabled = false;
+                btn_inicio.Visible = false;
+                btn_inicio2.Visible = true;
+            }
+            else
+                pnl_menulateral.Width = pnl_menulateral.Width - 38;
+        }
+
+        private void tmr_mostrar_Tick(object sender, EventArgs e)
+        {
+            if (pnl_menulateral.Width >= 250)
+            {
+                this.tmr_mostrar.Enabled = false;
+                btn_inicio.Visible = true;
+                btn_inicio2.Visible = false;
+            }
+            else
+            {
+                pnl_menulateral.Width = pnl_menulateral.Width + 38;
+            }
+        }
+
 
         private void btnPRODUCTOS_Click(object sender, EventArgs e)
         {
@@ -117,13 +151,9 @@ namespace Matriz_de_capacitación
         {
             mostrarlogo();
         }
-        private void mostrarlogo() {
-            AbrirFormInPanel(new frm_logo());
-        }
-
-        private void MenuVertical_Paint(object sender, PaintEventArgs e)
+        private void mostrarlogo()
         {
-
+            AbrirFormInPanel(new frm_logo());
         }
 
         private void btnREPORTES_Click(object sender, EventArgs e)
@@ -174,6 +204,37 @@ namespace Matriz_de_capacitación
 
         private void panelHeader_Paint(object sender, PaintEventArgs e)
         {
+
+        }
+
+        private void tmr_fecha_Tick(object sender, EventArgs e)
+        {
+            lbl_hora.Text = DateTime.Now.ToString("hh:mm:ss");
+            lbl_fecha.Text = DateTime.Now.ToLongDateString();
+        }
+
+        private void MenuVertical_Paint(object sender, PaintEventArgs e)
+        {
+            tmr_fecha.Enabled = true;
+        }
+
+        private void btninicio2_Click(object sender, EventArgs e)
+        {
+            AbrirFormInPanel(new frm_logo());
+        }
+
+        private void btm_Logout_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Está seguro que desea salir?", "Alerta", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                frm_login obLogin = new frm_login();
+                obLogin.Show();
+                this.Close();
+            }
+            else
+            {
+                
+            }
 
         }
 

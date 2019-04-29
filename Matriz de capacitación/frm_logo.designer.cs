@@ -29,87 +29,120 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_logo));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.picbx_logo = new System.Windows.Forms.PictureBox();
+            this.lbl_MDC = new System.Windows.Forms.Label();
+            this.pnl_inferior = new System.Windows.Forms.Panel();
+            this.lbl_razonsocial = new System.Windows.Forms.Label();
+            this.lbl_direccion = new System.Windows.Forms.Label();
+            this.pnl_titulo = new System.Windows.Forms.Panel();
+            this.lbl_regpat = new System.Windows.Forms.Label();
+            this.lbl_rh = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.picbx_logo)).BeginInit();
+            this.pnl_inferior.SuspendLayout();
+            this.pnl_titulo.SuspendLayout();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // picbx_logo
             // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1034, 569);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.picbx_logo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(221)))), ((int)(((byte)(225)))));
+            this.picbx_logo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.picbx_logo.Image = ((System.Drawing.Image)(resources.GetObject("picbx_logo.Image")));
+            this.picbx_logo.Location = new System.Drawing.Point(0, 0);
+            this.picbx_logo.Name = "picbx_logo";
+            this.picbx_logo.Size = new System.Drawing.Size(1034, 569);
+            this.picbx_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picbx_logo.TabIndex = 1;
+            this.picbx_logo.TabStop = false;
             // 
-            // label6
+            // lbl_MDC
             // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(875, 535);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(125, 13);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "RECURSOS HUMANOS";
+            this.lbl_MDC.AutoSize = true;
+            this.lbl_MDC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(221)))), ((int)(((byte)(225)))));
+            this.lbl_MDC.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lbl_MDC.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_MDC.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(206)))));
+            this.lbl_MDC.Location = new System.Drawing.Point(0, 80);
+            this.lbl_MDC.Margin = new System.Windows.Forms.Padding(5);
+            this.lbl_MDC.Name = "lbl_MDC";
+            this.lbl_MDC.Size = new System.Drawing.Size(655, 55);
+            this.lbl_MDC.TabIndex = 0;
+            this.lbl_MDC.Text = "MATRIZ DE CAPACITACIÓN";
             // 
-            // label5
+            // pnl_inferior
             // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(875, 509);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(147, 13);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "MATRIZ DE CAPACITACIÓN";
+            this.pnl_inferior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(221)))), ((int)(((byte)(225)))));
+            this.pnl_inferior.Controls.Add(this.lbl_razonsocial);
+            this.pnl_inferior.Controls.Add(this.lbl_direccion);
+            this.pnl_inferior.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnl_inferior.Location = new System.Drawing.Point(0, 489);
+            this.pnl_inferior.Name = "pnl_inferior";
+            this.pnl_inferior.Size = new System.Drawing.Size(1034, 80);
+            this.pnl_inferior.TabIndex = 0;
             // 
-            // label4
+            // lbl_razonsocial
             // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 509);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(249, 39);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "AV. SAN JOSE M. 23-B  LT-3\r\nCO. SAN JUAN IXHUAUTEPEC, TLALNEPANTLA\r\nEDO. DE MEXIC" +
-    "O C.P. 54180";
+            this.lbl_razonsocial.AutoSize = true;
+            this.lbl_razonsocial.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_razonsocial.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lbl_razonsocial.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
+            this.lbl_razonsocial.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(36)))), ((int)(((byte)(101)))));
+            this.lbl_razonsocial.Location = new System.Drawing.Point(0, 0);
+            this.lbl_razonsocial.Name = "lbl_razonsocial";
+            this.lbl_razonsocial.Size = new System.Drawing.Size(374, 62);
+            this.lbl_razonsocial.TabIndex = 1;
+            this.lbl_razonsocial.Text = "FARMACIAS GI S.A. DE C.V.\r\nRFC: FGI9905286T0";
             // 
-            // label3
+            // lbl_direccion
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(945, 9);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(77, 39);
-            this.label3.TabIndex = 11;
-            this.label3.Text = "C534469410-2\r\nA684912710-0\r\nY502850610-2";
+            this.lbl_direccion.AutoSize = true;
+            this.lbl_direccion.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_direccion.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lbl_direccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lbl_direccion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(193)))), ((int)(((byte)(198)))));
+            this.lbl_direccion.Location = new System.Drawing.Point(751, 0);
+            this.lbl_direccion.Name = "lbl_direccion";
+            this.lbl_direccion.Size = new System.Drawing.Size(283, 80);
+            this.lbl_direccion.TabIndex = 0;
+            this.lbl_direccion.Text = "AV. SAN JOSE Nº 13-B  LT-3\r\nCOL. SAN JUAN IXHUAUTEPEC\r\nC.P. 54180 , TLALNEPANTLA " +
+    "DE BAZ\r\nEDO. DE MEXICO C.P. 54180";
             // 
-            // label2
+            // pnl_titulo
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(879, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 13);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "REG. PAT.";
+            this.pnl_titulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(221)))), ((int)(((byte)(225)))));
+            this.pnl_titulo.Controls.Add(this.lbl_regpat);
+            this.pnl_titulo.Controls.Add(this.lbl_rh);
+            this.pnl_titulo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnl_titulo.Location = new System.Drawing.Point(0, 0);
+            this.pnl_titulo.Name = "pnl_titulo";
+            this.pnl_titulo.Size = new System.Drawing.Size(1034, 80);
+            this.pnl_titulo.TabIndex = 1;
             // 
-            // label1
+            // lbl_regpat
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(106, 13);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "RFC: FGI9905286T0";
+            this.lbl_regpat.AutoSize = true;
+            this.lbl_regpat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(221)))), ((int)(((byte)(225)))));
+            this.lbl_regpat.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lbl_regpat.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.lbl_regpat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(193)))), ((int)(((byte)(198)))));
+            this.lbl_regpat.Location = new System.Drawing.Point(808, 0);
+            this.lbl_regpat.Name = "lbl_regpat";
+            this.lbl_regpat.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lbl_regpat.Size = new System.Drawing.Size(226, 72);
+            this.lbl_regpat.TabIndex = 1;
+            this.lbl_regpat.Text = "REG. PAT. C534469410-2\r\nA684912710-0\r\nY502850610-2";
+            // 
+            // lbl_rh
+            // 
+            this.lbl_rh.AutoSize = true;
+            this.lbl_rh.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lbl_rh.Font = new System.Drawing.Font("Microsoft Sans Serif", 33.75F);
+            this.lbl_rh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(206)))));
+            this.lbl_rh.Location = new System.Drawing.Point(0, 0);
+            this.lbl_rh.Margin = new System.Windows.Forms.Padding(0);
+            this.lbl_rh.Name = "lbl_rh";
+            this.lbl_rh.Size = new System.Drawing.Size(523, 52);
+            this.lbl_rh.TabIndex = 1;
+            this.lbl_rh.Text = "RECURSOS HUMANOS";
             // 
             // frm_logo
             // 
@@ -117,17 +150,18 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1034, 569);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.lbl_MDC);
+            this.Controls.Add(this.pnl_titulo);
+            this.Controls.Add(this.pnl_inferior);
+            this.Controls.Add(this.picbx_logo);
             this.Name = "frm_logo";
-            this.Text = "inicio";
+            this.Text = "INICIO";
             this.Load += new System.EventHandler(this.frm_logo_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picbx_logo)).EndInit();
+            this.pnl_inferior.ResumeLayout(false);
+            this.pnl_inferior.PerformLayout();
+            this.pnl_titulo.ResumeLayout(false);
+            this.pnl_titulo.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -135,12 +169,13 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox picbx_logo;
+        private System.Windows.Forms.Label lbl_MDC;
+        private System.Windows.Forms.Panel pnl_titulo;
+        private System.Windows.Forms.Panel pnl_inferior;
+        private System.Windows.Forms.Label lbl_razonsocial;
+        private System.Windows.Forms.Label lbl_direccion;
+        private System.Windows.Forms.Label lbl_regpat;
+        private System.Windows.Forms.Label lbl_rh;
     }
 }

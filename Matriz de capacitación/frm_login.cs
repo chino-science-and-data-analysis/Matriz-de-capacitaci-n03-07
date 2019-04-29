@@ -25,39 +25,39 @@ namespace Matriz_de_capacitación
 
         private void txtuser_Enter(object sender, EventArgs e)
         {
-            if (txtuser.Text == "Usuario")
+            if (txt_user.Text == "Usuario")
             {
-                txtuser.Text = "";
-                txtuser.ForeColor = Color.Black;
+                txt_user.Text = "";
+                txt_user.ForeColor = Color.Black;
             }
         }
 
         private void txtuser_Leave(object sender, EventArgs e)
         {
-            if(txtuser.Text=="")
+            if(txt_user.Text=="")
             {
-                txtuser.Text = "Usuario";
-                txtuser.ForeColor = Color.Silver;
+                txt_user.Text = "Usuario";
+                txt_user.ForeColor = Color.DarkGray;
             }
         }
 
         private void txtpass_Enter(object sender, EventArgs e)
         {
-            if (txtpass.Text == "Contraseña")
+            if (txt_pass.Text == "Contraseña")
             {
-                txtpass.Text = "";
-                txtpass.ForeColor = Color.Black;
-                txtpass.UseSystemPasswordChar = true;
+                txt_pass.Text = "";
+                txt_pass.ForeColor = Color.Black;
+                txt_pass.UseSystemPasswordChar = true;
             }
         }
 
         private void txtpass_Leave(object sender, EventArgs e)
         {
-            if (txtpass.Text=="")
+            if (txt_pass.Text=="")
             {
-                txtpass.Text = "Contraseña";
-                txtpass.ForeColor = Color.Silver;
-                txtpass.UseSystemPasswordChar = false;
+                txt_pass.Text = "Contraseña";
+                txt_pass.ForeColor = Color.DarkGray;
+                txt_pass.UseSystemPasswordChar = false;
             }
         }
 
@@ -86,18 +86,18 @@ namespace Matriz_de_capacitación
         private void Form1_Load(object sender, EventArgs e)
         {
             //Resizable = false;
-            this.AcceptButton = btnlogin;
+            this.AcceptButton = btn_login;
             // this.textBox1.CharacterCasing = CharacterCasing.Upper;
             // this.textBox2.CharacterCasing = CharacterCasing.Upper;
-            txtuser.Focus();
-            txtuser.Select();
+            txt_user.Focus();
+            txt_user.Select();
         }
 
         private void btnlogin_Click(object sender, EventArgs e)
         {
             if
                 (
-                string.IsNullOrEmpty(txtuser.Text)
+                string.IsNullOrEmpty(txt_user.Text)
                 )
             {
                 MessageBox.Show("Usuario invalido");
@@ -107,8 +107,8 @@ namespace Matriz_de_capacitación
             else
             {
                 Usuarios UsuarioOb = new Usuarios();
-                UsuarioOb.Usuario = this.txtuser.Text;
-                UsuarioOb.Contraseña = this.txtpass.Text;
+                UsuarioOb.Usuario = this.txt_user.Text;
+                UsuarioOb.Contraseña = this.txt_pass.Text;
 
                 if (UsuarioOb.Buscar() == true)
                 {
@@ -117,7 +117,7 @@ namespace Matriz_de_capacitación
                 else
                 {
                     MessageBox.Show("Usuario o contraseña invalidos", "Error");
-                    txtpass.SelectAll();
+                    txt_pass.SelectAll();
                 }
 
             }

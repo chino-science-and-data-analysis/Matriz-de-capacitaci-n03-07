@@ -29,45 +29,45 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_login));
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pnl_logo = new System.Windows.Forms.Panel();
+            this.picbx_logo = new System.Windows.Forms.PictureBox();
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.lineShape2 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.txtuser = new System.Windows.Forms.TextBox();
-            this.txtpass = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnlogin = new System.Windows.Forms.Button();
-            this.linkpass = new System.Windows.Forms.LinkLabel();
-            this.btncerrar = new System.Windows.Forms.PictureBox();
-            this.btnminimizar = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btncerrar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnminimizar)).BeginInit();
+            this.txt_user = new System.Windows.Forms.TextBox();
+            this.txt_pass = new System.Windows.Forms.TextBox();
+            this.lbl_link = new System.Windows.Forms.LinkLabel();
+            this.lbl_matriz = new System.Windows.Forms.Label();
+            this.btn_minimizar = new System.Windows.Forms.PictureBox();
+            this.btn_cerrar = new System.Windows.Forms.PictureBox();
+            this.btn_login = new System.Windows.Forms.Button();
+            this.pnl_logo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picbx_logo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_minimizar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_cerrar)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
+            // pnl_logo
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(182)))));
-            this.panel1.Controls.Add(this.pictureBox3);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(202, 270);
-            this.panel1.TabIndex = 0;
-            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            this.pnl_logo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(12)))), ((int)(((byte)(33)))));
+            this.pnl_logo.Controls.Add(this.picbx_logo);
+            this.pnl_logo.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnl_logo.Location = new System.Drawing.Point(0, 0);
+            this.pnl_logo.Name = "pnl_logo";
+            this.pnl_logo.Size = new System.Drawing.Size(202, 270);
+            this.pnl_logo.TabIndex = 0;
+            this.pnl_logo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
-            // pictureBox3
+            // picbx_logo
             // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(0, 47);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(199, 133);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 0;
-            this.pictureBox3.TabStop = false;
+            this.picbx_logo.BackColor = System.Drawing.Color.Transparent;
+            this.picbx_logo.Image = ((System.Drawing.Image)(resources.GetObject("picbx_logo.Image")));
+            this.picbx_logo.Location = new System.Drawing.Point(-9, 64);
+            this.picbx_logo.Name = "picbx_logo";
+            this.picbx_logo.Size = new System.Drawing.Size(220, 133);
+            this.picbx_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picbx_logo.TabIndex = 0;
+            this.picbx_logo.TabStop = false;
             // 
             // shapeContainer1
             // 
@@ -86,8 +86,8 @@
             this.lineShape2.BorderColor = System.Drawing.Color.Black;
             this.lineShape2.Enabled = false;
             this.lineShape2.Name = "lineShape2";
-            this.lineShape2.X1 = 220;
-            this.lineShape2.X2 = 569;
+            this.lineShape2.X1 = 227;
+            this.lineShape2.X2 = 576;
             this.lineShape2.Y1 = 145;
             this.lineShape2.Y2 = 145;
             // 
@@ -96,143 +96,142 @@
             this.lineShape1.BorderColor = System.Drawing.Color.Black;
             this.lineShape1.Enabled = false;
             this.lineShape1.Name = "lineShape1";
-            this.lineShape1.X1 = 221;
-            this.lineShape1.X2 = 569;
+            this.lineShape1.X1 = 227;
+            this.lineShape1.X2 = 575;
             this.lineShape1.Y1 = 80;
             this.lineShape1.Y2 = 80;
             // 
-            // txtuser
+            // txt_user
             // 
-            this.txtuser.BackColor = System.Drawing.Color.White;
-            this.txtuser.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtuser.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtuser.ForeColor = System.Drawing.Color.Silver;
-            this.txtuser.Location = new System.Drawing.Point(220, 60);
-            this.txtuser.Name = "txtuser";
-            this.txtuser.Size = new System.Drawing.Size(408, 20);
-            this.txtuser.TabIndex = 1;
-            this.txtuser.Text = "Usuario";
-            this.txtuser.Enter += new System.EventHandler(this.txtuser_Enter);
-            this.txtuser.Leave += new System.EventHandler(this.txtuser_Leave);
+            this.txt_user.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(221)))), ((int)(((byte)(225)))));
+            this.txt_user.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_user.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_user.ForeColor = System.Drawing.Color.Gray;
+            this.txt_user.Location = new System.Drawing.Point(225, 60);
+            this.txt_user.Name = "txt_user";
+            this.txt_user.Size = new System.Drawing.Size(352, 20);
+            this.txt_user.TabIndex = 1;
+            this.txt_user.Text = "Usuario";
+            this.txt_user.Enter += new System.EventHandler(this.txtuser_Enter);
+            this.txt_user.Leave += new System.EventHandler(this.txtuser_Leave);
             // 
-            // txtpass
+            // txt_pass
             // 
-            this.txtpass.BackColor = System.Drawing.Color.White;
-            this.txtpass.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtpass.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtpass.ForeColor = System.Drawing.Color.Silver;
-            this.txtpass.Location = new System.Drawing.Point(219, 125);
-            this.txtpass.Name = "txtpass";
-            this.txtpass.Size = new System.Drawing.Size(352, 20);
-            this.txtpass.TabIndex = 2;
-            this.txtpass.Text = "Contraseña";
-            this.txtpass.Enter += new System.EventHandler(this.txtpass_Enter);
-            this.txtpass.Leave += new System.EventHandler(this.txtpass_Leave);
+            this.txt_pass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(221)))), ((int)(((byte)(225)))));
+            this.txt_pass.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_pass.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_pass.ForeColor = System.Drawing.Color.Gray;
+            this.txt_pass.Location = new System.Drawing.Point(225, 125);
+            this.txt_pass.Name = "txt_pass";
+            this.txt_pass.Size = new System.Drawing.Size(352, 20);
+            this.txt_pass.TabIndex = 2;
+            this.txt_pass.Text = "Contraseña";
+            this.txt_pass.Enter += new System.EventHandler(this.txtpass_Enter);
+            this.txt_pass.Leave += new System.EventHandler(this.txtpass_Leave);
             // 
-            // label1
+            // lbl_link
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(503, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(101, 32);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "LOGIN";
+            this.lbl_link.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.lbl_link.AutoSize = true;
+            this.lbl_link.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_link.LinkColor = System.Drawing.Color.DimGray;
+            this.lbl_link.Location = new System.Drawing.Point(307, 210);
+            this.lbl_link.Name = "lbl_link";
+            this.lbl_link.Size = new System.Drawing.Size(182, 17);
+            this.lbl_link.TabIndex = 0;
+            this.lbl_link.TabStop = true;
+            this.lbl_link.Text = "¿Ha olvidado contraseña?";
+            this.lbl_link.Visible = false;
             // 
-            // btnlogin
+            // lbl_matriz
             // 
-            this.btnlogin.BackColor = System.Drawing.Color.White;
-            this.btnlogin.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(159)))), ((int)(((byte)(127)))));
-            this.btnlogin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.btnlogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(182)))));
-            this.btnlogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnlogin.ForeColor = System.Drawing.Color.DimGray;
-            this.btnlogin.Location = new System.Drawing.Point(305, 193);
-            this.btnlogin.Name = "btnlogin";
-            this.btnlogin.Size = new System.Drawing.Size(187, 40);
-            this.btnlogin.TabIndex = 3;
-            this.btnlogin.Text = "ACCEDER";
-            this.btnlogin.UseVisualStyleBackColor = false;
-            this.btnlogin.Click += new System.EventHandler(this.btnlogin_Click);
+            this.lbl_matriz.AutoSize = true;
+            this.lbl_matriz.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_matriz.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(36)))), ((int)(((byte)(101)))));
+            this.lbl_matriz.Location = new System.Drawing.Point(222, 21);
+            this.lbl_matriz.Name = "lbl_matriz";
+            this.lbl_matriz.Size = new System.Drawing.Size(358, 33);
+            this.lbl_matriz.TabIndex = 9;
+            this.lbl_matriz.Text = "MATRIZ DE CAPACITACIÓN";
             // 
-            // linkpass
+            // btn_minimizar
             // 
-            this.linkpass.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.linkpass.AutoSize = true;
-            this.linkpass.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkpass.LinkColor = System.Drawing.Color.DimGray;
-            this.linkpass.Location = new System.Drawing.Point(307, 236);
-            this.linkpass.Name = "linkpass";
-            this.linkpass.Size = new System.Drawing.Size(182, 17);
-            this.linkpass.TabIndex = 0;
-            this.linkpass.TabStop = true;
-            this.linkpass.Text = "¿Ha olvidado contraseña?";
-            this.linkpass.Visible = false;
+            this.btn_minimizar.BackColor = System.Drawing.Color.Transparent;
+            this.btn_minimizar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.btn_minimizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_minimizar.Image = ((System.Drawing.Image)(resources.GetObject("btn_minimizar.Image")));
+            this.btn_minimizar.Location = new System.Drawing.Point(585, 3);
+            this.btn_minimizar.Name = "btn_minimizar";
+            this.btn_minimizar.Size = new System.Drawing.Size(15, 15);
+            this.btn_minimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btn_minimizar.TabIndex = 8;
+            this.btn_minimizar.TabStop = false;
+            this.btn_minimizar.Click += new System.EventHandler(this.btnminimizar_Click);
             // 
-            // btncerrar
+            // btn_cerrar
             // 
-            this.btncerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(182)))));
-            this.btncerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btncerrar.Image = ((System.Drawing.Image)(resources.GetObject("btncerrar.Image")));
-            this.btncerrar.Location = new System.Drawing.Point(601, 3);
-            this.btncerrar.Name = "btncerrar";
-            this.btncerrar.Size = new System.Drawing.Size(15, 15);
-            this.btncerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btncerrar.TabIndex = 7;
-            this.btncerrar.TabStop = false;
-            this.btncerrar.Click += new System.EventHandler(this.btncerrar_Click);
+            this.btn_cerrar.BackColor = System.Drawing.Color.Transparent;
+            this.btn_cerrar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.btn_cerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_cerrar.Image = ((System.Drawing.Image)(resources.GetObject("btn_cerrar.Image")));
+            this.btn_cerrar.Location = new System.Drawing.Point(601, 3);
+            this.btn_cerrar.Name = "btn_cerrar";
+            this.btn_cerrar.Size = new System.Drawing.Size(15, 15);
+            this.btn_cerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btn_cerrar.TabIndex = 7;
+            this.btn_cerrar.TabStop = false;
+            this.btn_cerrar.Click += new System.EventHandler(this.btncerrar_Click);
             // 
-            // btnminimizar
+            // btn_login
             // 
-            this.btnminimizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(182)))));
-            this.btnminimizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnminimizar.Image = ((System.Drawing.Image)(resources.GetObject("btnminimizar.Image")));
-            this.btnminimizar.Location = new System.Drawing.Point(585, 3);
-            this.btnminimizar.Name = "btnminimizar";
-            this.btnminimizar.Size = new System.Drawing.Size(15, 15);
-            this.btnminimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnminimizar.TabIndex = 8;
-            this.btnminimizar.TabStop = false;
-            this.btnminimizar.Click += new System.EventHandler(this.btnminimizar_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(213, 21);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(358, 33);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "MATRIZ DE CAPACITACIÓN";
+            this.btn_login.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(12)))), ((int)(((byte)(33)))));
+            this.btn_login.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_login.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_login.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(36)))), ((int)(((byte)(101)))));
+            this.btn_login.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.btn_login.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(182)))));
+            this.btn_login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_login.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_login.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(128)))), ((int)(((byte)(188)))));
+            this.btn_login.Image = global::Matriz_de_capacitación.Properties.Resources.logout__1_1;
+            this.btn_login.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_login.Location = new System.Drawing.Point(326, 162);
+            this.btn_login.Name = "btn_login";
+            this.btn_login.Size = new System.Drawing.Size(150, 45);
+            this.btn_login.TabIndex = 3;
+            this.btn_login.Text = "INGRESAR";
+            this.btn_login.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_login.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_login.UseVisualStyleBackColor = false;
+            this.btn_login.Click += new System.EventHandler(this.btnlogin_Click);
             // 
             // frm_login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(221)))), ((int)(((byte)(225)))));
             this.ClientSize = new System.Drawing.Size(623, 270);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.btnminimizar);
-            this.Controls.Add(this.btncerrar);
-            this.Controls.Add(this.linkpass);
-            this.Controls.Add(this.btnlogin);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtpass);
-            this.Controls.Add(this.txtuser);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.lbl_matriz);
+            this.Controls.Add(this.btn_minimizar);
+            this.Controls.Add(this.btn_cerrar);
+            this.Controls.Add(this.lbl_link);
+            this.Controls.Add(this.btn_login);
+            this.Controls.Add(this.txt_pass);
+            this.Controls.Add(this.txt_user);
+            this.Controls.Add(this.pnl_logo);
             this.Controls.Add(this.shapeContainer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frm_login";
-            this.Opacity = 0.97D;
+            this.Opacity = 0.98D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "LOGIN";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btncerrar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnminimizar)).EndInit();
+            this.pnl_logo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picbx_logo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_minimizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_cerrar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -240,19 +239,18 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnl_logo;
         private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape2;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape1;
-        private System.Windows.Forms.TextBox txtuser;
-        private System.Windows.Forms.TextBox txtpass;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnlogin;
-        private System.Windows.Forms.LinkLabel linkpass;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox btncerrar;
-        private System.Windows.Forms.PictureBox btnminimizar;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txt_user;
+        private System.Windows.Forms.TextBox txt_pass;
+        private System.Windows.Forms.Button btn_login;
+        private System.Windows.Forms.LinkLabel lbl_link;
+        private System.Windows.Forms.PictureBox picbx_logo;
+        private System.Windows.Forms.PictureBox btn_cerrar;
+        private System.Windows.Forms.PictureBox btn_minimizar;
+        private System.Windows.Forms.Label lbl_matriz;
     }
 }
 

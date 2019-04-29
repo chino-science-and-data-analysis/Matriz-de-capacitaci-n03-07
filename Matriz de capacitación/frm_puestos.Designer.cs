@@ -160,7 +160,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frm_puestos";
             this.Text = "Alta de puestos";
-            this.Load += new System.EventHandler(this.frmAltapuesto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridPuestos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

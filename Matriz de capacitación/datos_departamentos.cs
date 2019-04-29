@@ -14,6 +14,7 @@ namespace Matriz_de_capacitación
         private string Nombre;
         private string Id_Eliminado;
         private string Fecha_Eliminado;
+        private string Usuario;
         private string Columna1;
         public datos_departamentos()
         {

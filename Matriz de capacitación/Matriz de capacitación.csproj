@@ -275,6 +275,7 @@
     <None Include="bin\Debug\WindowsFormsApplication3.exe.config" />
     <None Include="bin\Debug\WindowsFormsApplication3.vshost.exe.config" />
     <None Include="bin\Debug\WindowsFormsApplication3.vshost.exe.manifest" />
+    <None Include="ClassDiagram2.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -310,8 +311,35 @@
     <Content Include="Resources\Archivos\Gi.ico" />
     <Content Include="Resources\blue.png" />
     <Content Include="Resources\botones_p_venta_15_abB_icon.ico" />
+    <None Include="Resources\Departamentos\appbar.group.add.png" />
+    <None Include="Resources\Departamentos\appbar.group.delete.png" />
+    <None Include="Resources\Departamentos\appbar.edit.add.png" />
+    <None Include="Resources\Departamentos\appbar.home.variant.enter.png" />
+    <None Include="Resources\Departamentos\Health-PNG-Image.png" />
+    <None Include="Resources\Departamentos\save.png" />
     <Content Include="Resources\escudounam_azul_m2008_jpg.jpg" />
     <Content Include="Resources\green.png" />
+    <None Include="Resources\ICONOS BLUE\bar-graph1.png" />
+    <None Include="Resources\iconos\white\clientes.png" />
+    <None Include="Resources\ICONOS BLUE\user.png" />
+    <None Include="Resources\ICONOS BLUE\logout %281%291.png" />
+    <None Include="Resources\iconos\white\empleados.png" />
+    <None Include="Resources\ICONOS BLUE\person-settings1.png" />
+    <None Include="Resources\ICONOS BLUE\patient %281%291.png" />
+    <None Include="Resources\iconos\white\producto.png" />
+    <None Include="Resources\ICONOS BLUE\seo1.png" />
+    <None Include="Resources\ICONOS BLUE\phone-book %281%291.png" />
+    <None Include="Resources\ICONOS BLUE\payment1.png" />
+    <None Include="Resources\ICONOS BLUE\menu.png" />
+    <None Include="Resources\ICONOS BLUE\Minimize.png" />
+    <None Include="Resources\ICONOS BLUE\Normal.png" />
+    <None Include="Resources\ICONOS BLUE\maximize3.png" />
+    <None Include="Resources\ICONOS BLUE\cancel.png" />
+    <None Include="Resources\iconos\new iconos\boss_man-128.png" />
+    <None Include="Resources\iconos\white\salir.png" />
+    <None Include="Resources\ICONOS BLUE\Health-PNG-Image.png" />
+    <None Include="Resources\iconos\white\salir_.png" />
+    <None Include="Resources\iconos\white\salir__.png" />
     <Content Include="Resources\info.png" />
     <Content Include="Resources\loading-bar.gif" />
     <Content Include="Resources\logoFondo.png" />
@@ -327,6 +355,7 @@
     <Content Include="Resources\logos\Punto de venta botones-10.png" />
     <Content Include="Resources\logos\Punto de venta botones-11.png" />
     <Content Include="Resources\logos\Punto de venta botones-12.png" />
+    <None Include="Resources\LogotipoGi.png" />
     <Content Include="Resources\logounam200px.png" />
     <Content Include="Resources\red.png" />
     <None Include="Resources\btn-03.png" />
@@ -3028,6 +3057,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\Release\" />
+    <Folder Include="Resources\Menu Lateral\" />
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="Microsoft.Office.Core">
